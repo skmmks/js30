@@ -71,6 +71,7 @@
         const now = new Date();
         const seconds = now.getSeconds();
         const secondsToDeg = (seconds / 60) * 360;
+        secondHand.style.transform = `rotate(${secondsToDeg}deg)`;
         console.log(seconds);
       }
       setInterval(setDate, 1000);

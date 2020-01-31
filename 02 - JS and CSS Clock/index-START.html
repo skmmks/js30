@@ -71,9 +71,13 @@
       function setDate() {
         const now = new Date();
         const seconds = now.getSeconds();
+        const minutes = now.getMinutes();
         const secondsToDeg = (seconds / 60) * 360 + 90;
+        const minutestoDeg = (minutes / 60) * 360 + 90;
         secondHand.style.transform = `rotate(${secondsToDeg}deg)`;
+        minuteHand.style.transform = `rotate(${minutestoDeg}deg)`;
         console.log(seconds);
+        console.log(minutes);
       }
       setInterval(setDate, 1000);
     </script>
